@@ -2,8 +2,7 @@ import React, {useEffect, useState} from "react";
 import './App.css';
 import axios from 'axios'
 import { BASE_URL, API_KEY } from './constants/index'
-import { Container, Card, Carousel, Row, Col, ListGroup, Navbar, Button } from 'react-bootstrap'
-
+import { Container, Card, Row, Col, ListGroup, Navbar } from 'react-bootstrap'
 
 
 function App() {
@@ -38,7 +37,7 @@ function App() {
             <Row>
                   <Col sm={3}>
                     <ListGroup defaultActiveKey="#link1">
-                      <ListGroup.Item variant="primary">CLICK BELOW TITLES TO SET FEATURED IMAGE</ListGroup.Item>
+                      <ListGroup.Item variant="primary">CLICK BELOW TITLE TO SET FEATURED IMAGE</ListGroup.Item>
                       { photos.map ((photo, index) => {
                         return <ListGroup.Item action onClick={ () =>setImg(photos[index])}>{photo.title}</ListGroup.Item>
                       })}
